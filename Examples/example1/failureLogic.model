@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<failureLogic:FailureLogicPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:FTA="http://www.deis-project.eu/ode/failureLogic/FTA" xmlns:failureLogic="org.ufjf.ode.failureLogic" xmi:id="_j7roUOT7Ee-jcKyTOsjfyQ">
+  <failureModels xsi:type="FTA:AttackTree" xmi:id="_kxBU4OT7Ee-jcKyTOsjfyQ">
+    <failures xsi:type="failureLogic:DamageScenario" xmi:id="_w2NIkOT8Ee-jcKyTOsjfyQ" name="turning-off-lamp"/>
+    <failures xsi:type="failureLogic:ThreatScenario" xmi:id="_2FbmgOT8Ee-jcKyTOsjfyQ" name="spoofing"/>
+    <failures xsi:type="failureLogic:ThreatScenario" xmi:id="_2_YGQOT8Ee-jcKyTOsjfyQ" name="tampering"/>
+    <failures xsi:type="failureLogic:Attack" xmi:id="_6eBXYOT8Ee-jcKyTOsjfyQ" name="compromise-from-celular"/>
+    <failures xsi:type="failureLogic:Attack" xmi:id="_7BepwOT8Ee-jcKyTOsjfyQ" name="compromise-from-bluetooth"/>
+    <failures xsi:type="failureLogic:Attack" xmi:id="_7Zdr8OT8Ee-jcKyTOsjfyQ" name="compromise-getaway"/>
+    <causes xsi:type="FTA:Gate" xmi:id="_lVXYEOT7Ee-jcKyTOsjfyQ" name="turning-off-lamp" description="Uniteded turning-off off headlamp during night driving at medium speed" failure="_w2NIkOT8Ee-jcKyTOsjfyQ" causes="_8GdKQOT7Ee-jcKyTOsjfyQ _AByXYOT8Ee-jcKyTOsjfyQ"/>
+    <causes xsi:type="FTA:Gate" xmi:id="_8GdKQOT7Ee-jcKyTOsjfyQ" name="spoofing" description="Spoofing of the 'Lamp Request' signal to the power switch ECU" failure="_2FbmgOT8Ee-jcKyTOsjfyQ" causes="_A2E7EOT8Ee-jcKyTOsjfyQ _AeF44OT8Ee-jcKyTOsjfyQ _BLrXoOT8Ee-jcKyTOsjfyQ"/>
+    <causes xsi:type="FTA:Gate" xmi:id="_AByXYOT8Ee-jcKyTOsjfyQ" name="tampering" description="Tampering with a signal sent by body control ECU" failure="_2_YGQOT8Ee-jcKyTOsjfyQ" undeveloped="true"/>
+    <causes xmi:id="_AeF44OT8Ee-jcKyTOsjfyQ" name="compromise-from-celular" description="Compromise of navigation ECU from celular interface" failure="_6eBXYOT8Ee-jcKyTOsjfyQ"/>
+    <causes xmi:id="_A2E7EOT8Ee-jcKyTOsjfyQ" name="compromise-from-bluetooth" description="Compromise of navigation ECU from Bluetooth interface" failure="_7BepwOT8Ee-jcKyTOsjfyQ"/>
+    <causes xmi:id="_BLrXoOT8Ee-jcKyTOsjfyQ" name="compromise-getaway" description="Compromise of gateway ECU by receiving malicius control signals from OBD2 connector" failure="_7Zdr8OT8Ee-jcKyTOsjfyQ"/>
+  </failureModels>
+</failureLogic:FailureLogicPackage>

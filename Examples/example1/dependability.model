@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dependability_:DependabilityPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dependability_="http://www.deis-project.eu/ode/mergedODE/dependability" xmi:id="_jg9wUOT9Ee-jcKyTOsjfyQ">
+  <domainPackages xmi:id="_niynAOT9Ee-jcKyTOsjfyQ">
+    <assuranceLevels xmi:id="_oN_gIOT9Ee-jcKyTOsjfyQ" name="Cal 4"/>
+    <assuranceLevels xmi:id="_s8WFoOT9Ee-jcKyTOsjfyQ" name="Cal 2"/>
+  </domainPackages>
+</dependability_:DependabilityPackage>

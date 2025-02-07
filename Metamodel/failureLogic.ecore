@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="failureLogic" nsURI="http://www.deis-project.eu/ode/failureLogic"
-    nsPrefix="failureLogic">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="failureLogic" nsURI="org.ufjf.ode.failureLogic" nsPrefix="failureLogic">
   <eClassifiers xsi:type="ecore:EClass" name="FailureLogicPackage">
     <eStructuralFeatures xsi:type="ecore:EReference" name="failureModels" upperBound="-1"
         eType="#//FailureModel" containment="true"/>
@@ -48,6 +47,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProbDistParam" eSuperTypes="base.ecore#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DamageScenario" eSuperTypes="#//SecurityViolation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThreatScenario" eSuperTypes="#//SecurityViolation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attack" eSuperTypes="#//SecurityViolation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttackPath" eSuperTypes="#//Attack"/>
   <eSubpackages name="FTA" nsURI="http://www.deis-project.eu/ode/failureLogic/FTA"
       nsPrefix="FTA">
     <eClassifiers xsi:type="ecore:EEnum" name="GateType">
@@ -75,12 +78,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="Cause" eSuperTypes="base.ecore#//BaseElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//FTA/CauseType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failure" eType="#//Failure"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="undeveloped" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Gate" eSuperTypes="#//FTA/Cause">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="gateType" eType="#//FTA/GateType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
           eType="#//FTA/Cause"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AttackTree" eSuperTypes="#//FTA/FaultTree"/>
   </eSubpackages>
   <eSubpackages name="Markov" nsURI="http://www.deis-project.eu/ode/failureLogic/Markov"
       nsPrefix="Markov">
